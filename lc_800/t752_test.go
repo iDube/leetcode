@@ -1,8 +1,9 @@
 package lc_800
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 // 752. 打开转盘锁
@@ -107,7 +108,7 @@ func openLock(deadends []string, target string) int {
 
 	// 数据格式转换，
 	dead := make(map[LockNum]bool, len(deadends))
-	for i, _ := range deadends {
+	for i := range deadends {
 		dead[NewNum(deadends[i])] = true
 	}
 
